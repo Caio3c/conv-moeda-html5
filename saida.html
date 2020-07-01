@@ -28,6 +28,8 @@
 		var sReais = oJSON.rates.BRL;
 		
 		console.log(sReais);
+	    
+	    document.querySelector("#valor_destino").value = sReais;
 			
 		}
 		
@@ -38,6 +40,8 @@
 			oRequest.open("GET", sURL);
 			oRequest.send();
 			console.log("depois send")	
+			
+		
 		}
 		
 		window.onload = function(){
@@ -52,7 +56,7 @@
 		<input type ="text" value="BRL" disabled>
 		<br />
 		<label>Moeda de origem</label>
-       	<input type = "number" disabled >
+       	<input id="valor_destino" type = "number" disabled >
        	
        	<br />
        	<button type="button" onclick="voltar()">
